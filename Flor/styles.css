@@ -1,0 +1,378 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f8f0ff;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 200 200"><g opacity="0.1"><g transform="translate(30, 30) scale(0.5)"><circle cx="50" cy="50" r="15" fill="%23FFEB3B"/><g fill="%23FFFFFF"><ellipse cx="50" cy="30" rx="8" ry="12"/><ellipse cx="50" cy="70" rx="8" ry="12"/><ellipse cx="30" cy="50" rx="12" ry="8"/><ellipse cx="70" cy="50" rx="12" ry="8"/></g></g><g transform="translate(150, 60) scale(0.6)"><path d="M0,-20 C15,-15 15,0 0,15 C-15,0 -15,-15 0,-20" fill="%238A2BE2"/><path d="M-15,-15 C-5,-25 5,-25 15,-15 C15,-5 15,5 15,15 C5,25 -5,25 -15,15 C-15,5 -15,-5 -15,-15" fill="%239370DB"/></g><g transform="translate(80, 140) scale(0.7)"><path d="M0,-20 C20,-20 20,0 0,20 C-20,0 -20,-20 0,-20" fill="%23FF69B4"/><path d="M-3,-17 C10,-17 10,0 -3,17 C-16,0 -16,-17 -3,-17" fill="%23FF1493"/></g></g></svg>');
+    background-attachment: fixed;
+    background-size: 800px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #8e44ad;
+    margin-bottom: 25px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(142, 68, 173, 0.2);
+    background: linear-gradient(45deg, #8e44ad, #e84393);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #6c5ce7;
+    margin: 15px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+    color: #00b894;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Sección de instrucciones */
+.instructions {
+    background-color: rgba(248, 249, 250, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 5px solid #6c5ce7;
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.instructions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(108, 92, 231, 0.05), rgba(232, 67, 147, 0.05));
+    z-index: -1;
+}
+
+.instructions ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.instructions li::before {
+    content: '•';
+    color: #6c5ce7;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+.flower-name {
+    font-weight: bold;
+    color: #e84393;
+    padding: 0 5px;
+    border-radius: 4px;
+    background-color: rgba(232, 67, 147, 0.1);
+    transition: all 0.3s ease;
+}
+
+.flower-name:hover {
+    background-color: rgba(232, 67, 147, 0.2);
+}
+
+/* Sección de entrada */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.multiplos, .check-number {
+    background: linear-gradient(135deg, rgba(241, 249, 254, 0.8), rgba(237, 240, 255, 0.8));
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(108, 92, 231, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.multiplos:hover, .check-number:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.multiplos h3, .check-number h3 {
+    background: linear-gradient(45deg, #00b894, #6c5ce7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+
+.multiplo-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.2);
+    outline: none;
+}
+
+.check-input {
+    display: flex;
+    gap: 15px;
+}
+
+#numberToCheck {
+    flex-grow: 1;
+}
+
+button {
+    background: linear-gradient(45deg, #8e44ad, #6c5ce7);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    box-shadow: 0 6px 10px rgba(108, 92, 231, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active, button.button-clicked {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(108, 92, 231, 0.2);
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Sección de resultados */
+.result-section {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(253, 242, 255, 0.9), rgba(243, 235, 255, 0.9));
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(142, 68, 173, 0.15);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(142, 68, 173, 0.1);
+}
+
+.result-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(232, 67, 147, 0.03) 10%, transparent 70%);
+    z-index: -1;
+    animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.result-section h2 {
+    margin-bottom: 20px;
+    color: #8e44ad;
+    text-shadow: 1px 1px 2px rgba(142, 68, 173, 0.2);
+}
+
+.flower-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.flower-img {
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+.flower-img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.flower-result-name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #6c5ce7, #e84393);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.explanation {
+    background-color: rgba(248, 249, 250, 0.8);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-style: italic;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(108, 92, 231, 0.1);
+    line-height: 1.6;
+}
+
+/* Imágenes de flores */
+.margarita {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="yellowGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:%23FFF176"/><stop offset="100%" style="stop-color:%23FFEB3B"/></radialGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="2"/><feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="50" r="20" fill="url(%23yellowGrad)" filter="url(%23shadow)"/><g fill="white" filter="url(%23shadow)"><ellipse cx="50" cy="20" rx="10" ry="15"/><ellipse cx="50" cy="80" rx="10" ry="15"/><ellipse cx="20" cy="50" rx="15" ry="10"/><ellipse cx="80" cy="50" rx="15" ry="10"/><ellipse cx="28" cy="28" rx="12" ry="12"/><ellipse cx="72" cy="28" rx="12" ry="12"/><ellipse cx="28" cy="72" rx="12" ry="12"/><ellipse cx="72" cy="72" rx="12" ry="12"/></g><path d="M 50 50 Q 51 85 50 120" stroke="%2327AE60" stroke-width="3" fill="none"/><path d="M 50 65 Q 55 70 60 68" stroke="%2327AE60" stroke-width="2" fill="none"/></svg>');
+    animation: sway 5s ease-in-out infinite alternate;
+}
+
+.rosa {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23FF87B2"/><stop offset="100%" style="stop-color:%23FF1493"/></linearGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="2"/><feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g transform="translate(50, 40)"><path d="M0,-20 C20,-20 20,0 0,20 C-20,0 -20,-20 0,-20" fill="url(%23pinkGrad)" filter="url(%23shadow)"/><path d="M-3,-17 C10,-17 10,0 -3,17 C-16,0 -16,-17 -3,-17" fill="%23FF5CAA" filter="url(%23shadow)"/><path d="M3,-17 C16,-17 16,0 3,17 C-10,0 -10,-17 3,-17" fill="%23FF5CAA" filter="url(%23shadow)"/><path d="M0,-15 C10,-15 10,-5 0,5 C-10,-5 -10,-15 0,-15" fill="%23FF87B2" filter="url(%23shadow)"/></g><path d="M 50 60 Q 51 90 50 120" stroke="%2327AE60" stroke-width="3" fill="none"/><path d="M 45 65 Q 40 60 40 55" stroke="%2327AE60" stroke-width="2" fill="none"/><path d="M 55 65 Q 60 60 60 55" stroke="%2327AE60" stroke-width="2" fill="none"/></svg>');
+    animation: sway 6s ease-in-out infinite alternate-reverse;
+}
+
+.violeta {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23AA66CC"/><stop offset="100%" style="stop-color:%238A2BE2"/></linearGradient><radialGradient id="centerGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:%23FFD700"/><stop offset="100%" style="stop-color:%23F9A825"/></radialGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="2"/><feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g transform="translate(50, 40)"><path d="M0,-20 C15,-15 15,0 0,15 C-15,0 -15,-15 0,-20" fill="%239370DB" filter="url(%23shadow)"/><path d="M-15,-15 C-5,-25 5,-25 15,-15 C15,-5 15,5 15,15 C5,25 -5,25 -15,15 C-15,5 -15,-5 -15,-15" fill="url(%23purpleGrad)" filter="url(%23shadow)"/><circle cx="0" cy="0" r="10" fill="url(%23centerGrad)" filter="url(%23shadow)"/></g><path d="M 50 55 Q 51 85 50 120" stroke="%2327AE60" stroke-width="3" fill="none"/><path d="M 48 70 Q 45 65 35 65" stroke="%2327AE60" stroke-width="2" fill="none"/><path d="M 52 70 Q 55 65 65 65" stroke="%2327AE60" stroke-width="2" fill="none"/></svg>');
+    animation: sway 7s ease-in-out infinite alternate;
+}
+
+.ninguna {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="grayGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23f0f0f0"/><stop offset="100%" style="stop-color:%23e0e0e0"/></linearGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="0" dy="2"/><feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="50" r="40" fill="url(%23grayGrad)" stroke="%23ccc" stroke-width="2" filter="url(%23shadow)"/><line x1="30" y1="30" x2="70" y2="70" stroke="%23bbb" stroke-width="4"/><line x1="70" y1="30" x2="30" y2="70" stroke="%23bbb" stroke-width="4"/></svg>');
+}
+
+@keyframes sway {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .multiplo-inputs {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .flower-result-name {
+        font-size: 1.8rem;
+    }
+}

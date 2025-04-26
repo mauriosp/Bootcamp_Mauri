@@ -1,38 +1,79 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marzo 17</title>
-    <link rel="stylesheet" href="/screen.css">
+    <title>Descubre Tu Flor</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="website icon" type="png" href="./flor.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-    <h1>Reto de HTML, CSS y JS</h1>
-    <ul>
-        <li>Traer elementos al JS</li>
-        <li>Capturar el valor de entrada</li>
-        <li>Cuando le doy click al boton ejecutar una función</li>
-        <li>Crear una función que dependiendo de la entrada me de una flor</li>
-        <li>Crear un elemento en el texto de la salida de la función y agregarlo al div</li>
-    </ul>
-    <h3>Ingresa valores y observa cual seria tu flor</h3>
-    <p>Si el numero ingresado es multiplo del primer y segundo multiplo, la flor es: Margarita</p>
-    <p>Si el numero ingresado es multiplo del tercer y cuarto multiplo, la flor es: Rosa</p>
-    <p>Si el numero ingresado es multiplo de los cuatro multiplos, la flor es: Violeta</p>
-    <p>El numero debe ser multiplo de por lo menos dos valores ingresados</p>
-    <p>Recuerda que debe cumplir las anteriores condiciones, de lo contrario tu flor será: Ninguna</p>
-    <h4>Ingresa los multiplos</h4>
-    <p>
-        <input type="number" id="entradaMultiplos" placeholder="Ingresa el primer multiplo">
-        <button type="button" id="btnMultiplos">Guardar</button>
-    </p>
-    <div id="salidaMultiplos"></div>
-    <h3>Ingresa el valor del numero que deseas saber cual es multiplo</h3>
-    <!-- <p><input type="number" id="multiplo2" placeholder="Ingresa el segundo numero multiplo"></p>
-    <p><input type="number" id="multiplo3" placeholder="Ingresa el tercer numero multiplo"></p>
-    <p><input type="number" id="multiplo4" placeholder="Ingresa el cuarto numero multiplo"></p> -->
-    <input type="number" id="entradaNumeroFlor" placeholder="Ingresa un numero">
-    <button type="button" id="btnNumero">Calcular</button>
-    <div id="salidaFlor"></div>
+    <div class="container">
+        <h1>Descubre Tu Flor</h1>
+        
+        <div class="instructions">
+            <h2>Instrucciones:</h2>
+            <ul>
+                <li>Ingresa 4 números que serán tus múltiplos.</li>
+                <li>Ingresa un número para comprobar de qué flor eres.</li>
+                <li>El número debe ser múltiplo de al menos 2 valores ingresados.</li>
+            </ul>
+            
+            <h3>Resultados posibles:</h3>
+            <ul>
+                <li>Si el número es múltiplo del primer y segundo múltiplo → <span class="flower-name">Margarita</span></li>
+                <li>Si el número es múltiplo del tercer y cuarto múltiplo → <span class="flower-name">Rosa</span></li>
+                <li>Si el número es múltiplo de los cuatro múltiplos → <span class="flower-name">Violeta</span></li>
+                <li>Si no cumple las condiciones anteriores → <span class="flower-name">Ninguna</span></li>
+            </ul>
+        </div>
+        
+        <div class="input-section">
+            <div class="multiplos">
+                <h3>Ingresa tus 4 múltiplos:</h3>
+                <div class="multiplo-inputs">
+                    <div class="input-group">
+                        <label for="multiplo1">Múltiplo 1:</label>
+                        <input type="number" id="multiplo1" min="1" value="2">
+                    </div>
+                    <div class="input-group">
+                        <label for="multiplo2">Múltiplo 2:</label>
+                        <input type="number" id="multiplo2" min="1" value="3">
+                    </div>
+                    <div class="input-group">
+                        <label for="multiplo3">Múltiplo 3:</label>
+                        <input type="number" id="multiplo3" min="1" value="5">
+                    </div>
+                    <div class="input-group">
+                        <label for="multiplo4">Múltiplo 4:</label>
+                        <input type="number" id="multiplo4" min="1" value="7">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="check-number">
+                <h3>Ingresa un número para verificar:</h3>
+                <div class="check-input">
+                    <input type="number" id="numberToCheck" min="1" value="30">
+                    <button id="checkButton">Verificar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="result-section">
+            <h2>Tu flor es:</h2>
+            <div class="flower-result">
+                <div id="flowerImage" class="flower-img"></div>
+                <div id="flowerName" class="flower-result-name">Ingresa valores y verifica</div>
+            </div>
+            <div id="explanation" class="explanation"></div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
 </body>
-<script src="/main.js"></script>
 </html>
