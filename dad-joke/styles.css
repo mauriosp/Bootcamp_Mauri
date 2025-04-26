@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    background-position: middle;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.joke {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(139, 0, 0, 0.971);
+}
+
+.joke-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo con más transparencia */
+    border-radius: 8px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.5);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
